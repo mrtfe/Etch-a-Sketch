@@ -74,6 +74,10 @@ p {
   margin-top: 0px;
 }
 
+#random-color-btn {
+  padding-left: 5px;
+  padding-right: 5px;
+}
 /* button */
 
 button {
