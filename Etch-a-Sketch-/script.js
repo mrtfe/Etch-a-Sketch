@@ -2,6 +2,7 @@
 const GRID_CONTAINER = document.querySelector(".sketch-box__container");
 const CLEAR_BTN = document.querySelector(".clear-btn");
 const APPLY_BTN = document.querySelector(".apply-btn");
+// const RANDOM_COLOR_BTN = document.getElementById("random-color-btn");
 
 const slider = document.getElementById("myRange");
 const output = document.querySelector("p");
@@ -27,6 +28,16 @@ function createGrid() {
   }
 }
 
+// generate random color
+// function getRandomColor() {
+//   const letters = "0123456789ABCDEF";
+//   let color = "#";
+//   for (let i = 0; i < 6; i++) {
+//     color += letters[Math.floor(Math.random() * 16)];
+//   }
+//   return color;
+// }
+
 // show slider values
 slider.oninput = () => {
   output.innerHTML = `${slider.value} x ${slider.value}`;
@@ -34,6 +45,7 @@ slider.oninput = () => {
 
 APPLY_BTN.addEventListener("click", createGrid);
 CLEAR_BTN.addEventListener("click", createGrid);
+// RANDOM_COLOR_BTN.addEventListener("click", getRandomColor);
 
 // initialize
 createGrid();
